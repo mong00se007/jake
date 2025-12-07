@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Plane Landing</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Global Build for file:// compatibility -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+</head>
+
+<body>
+    <div id="game-ui">
+        <!-- Minimap -->
+        <canvas id="minimap" width="200" height="200"></canvas>
+
+        <div id="hud">
+            <div id="speed-indicator">0 kts</div>
+            <div id="timer"></div>
+            <div id="status">Ready</div>
+        </div>
+
+        <!-- Full Map Overlay -->
+        <div id="full-map-overlay" class="hidden">
+            <canvas id="full-map"></canvas>
+            <div id="map-hint">Press E to Close</div>
+        </div>
+
+        <div id="start-screen" class="overlay">
+            <h1>Cirrus Landing</h1>
+            <p>Use Arrow Keys to Fly</p>
+            <p>Press E for Map</p>
+            <button id="start-btn">Take Off</button>
+        </div>
+        <div id="game-over-screen" class="overlay hidden">
+            <h1 id="game-over-title">Game Over</h1>
+            <p id="game-over-reason"></p>
+            <button id="restart-btn">Try Again</button>
+        </div>
+    </div>
+    <div id="game-container"></div>
+    <!-- Standard script, not module -->
+    <script src="game.js"></script>
+</body>
+
+</html>
